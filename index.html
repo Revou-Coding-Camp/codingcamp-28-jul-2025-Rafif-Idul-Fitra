@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        .text-logo-pattern {
+            background-clip: text;
+            -webkit-background-clip: text;
+            color : transparent;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col">
+    <header class="bg-white shadow-md">
+        <nav class="flex flex-col md:flex-row py-4 px-6 items-center justify-between">
+            <span class="text-logo-pattern bg-[url(/src/images/warnaLogo.jpg)] bg-cover bg-center text-transparent text-2xl font-bold">Logo</span>
+            <ul class="flex space-x-5 mt-4 md:mt-0 text-sm">
+                <li class="hover:text-orange-500"><a href="#" id="navHome">Home</a></li>
+                <li class="hover:text-orange-500"><a href="#OurProfile" id="navProfile">Our Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="flex-grow">
+        <section id="inputSection" class="flex items-center justify-center p-6">
+            <div class="bg-white p-6 rounded shadow-md w-full max-w-md text-center">
+                <h2 class="text-xl font-semibold mb-4">Masukan Nama Anda</h2>
+                <form id="nameForm" class="flex flex-col space-y-4">
+                    <input type="text" id="nameInput" placeholder="Nama Anda" class="border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400 required"/>
+                <button type="submit" class="bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition">Submit</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="welcomeSection" class="hidden text-center py-12 px-4">
+            <h1 id="welcomeMessage" class="text-3xl font-bold text-gray-800"></h1>
+        </section>
+
+        <!-- Our Profile -->
+        <section id="profileSection" class="hidden p-6 space-y-6 max-w-4xl mx-auto">
+            <div class="w-full h-56 bg-[url(/src/images/banner.jpg)] bg-cover bg-center rounded-lg shadow-md"></div>
+            
+            <div class="bg-white p-4 rounded shadow">
+                <h2 class="text-2xl font-semibold mb-2"> Profil Kami</h2>
+                <p class="text-gray-700"> Kami adalah perusahaan yang bergerak dalam bidang jasa dan perjalanan. Kami memiliki tim profesional yang siap membantu Anda dalam berbagai kebutuhan perjalanan.</p>
+            </div>
+        
+            <div class="bg-white p-4 rounded shadow">
+                <h2 class="text-2xl font-semibold mb-4 ">Visi dan Misi</h2>
+                <h3 class="font-bold mt-2">Visi</h3>
+                <p class="text-gray-700">Mewujudkan perusahaan yang unggul dalam bidang jasa dan perjalanan.</p>
+                <h3 class="font-bold mt-4">Misi</h3>
+                <ul class="list-disc list-inside space-y-1 text-gray-700">
+                    <li>Meningkatkan kualitas layanan perjalanan.</li>
+                    <li>Memberikan pengalaman yang memuaskan kepada pelanggan.</li>
+                    <li>Mengembangkan tim profesional yang siap membantu Anda dalam berbagai kebutuhan perjalanan.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="messageSection" class="hidden p-6 space-y-4 max-w-3xl mx-auto bg-white rounded shadow mt-10">
+            <h2 class="text-2xl font-semibold text-gray-800">Message Us</h2>
+            <form id="messageForm" class="space-x-4">
+                <div>
+                    <label for="userName" class="block text-sm font-medium">Name</label>
+                    <input type="text" id="userName" name="userName" class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400" required>
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium">Email</label>
+                    <input type="email" id="email" name="email" class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400" required>
+                </div>
+                <div>
+                    <label for="message" class="block text-sm font-medium">Message</label>
+                    <textarea name="message" rows="4" id="message" class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea>
+                    </div>
+                <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Submit</button>
+            </form>
+            <div id="outputMessage" class="hidden border-green-400 bg-green-100 mt-6 p-4 border rounded text-green-700"></div>
+        </section>
+    
+    </main>
+
+    <footer class="bg-white text-center p-4 text-sm text-gray-500">
+        <p>&copy; 2025 Rafif Idul Fitra. All rights reserved.</p>
+    </footer>
+    <script src="script.js"/>
+</body>
+</html>
